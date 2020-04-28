@@ -28,7 +28,7 @@ $ exit;
  - MySQL 설정 파일 수정하기
 ```
 $ sudo apt-get install vim
-$ cd /etc/mysql/mysql/conf.d;
+$ cd /etc/mysql/mysql.conf.d;
 $ sudo vi mysqld.cnf;
 bind-address = 0.0.0.0로 
 $ sudo service mysql restart
