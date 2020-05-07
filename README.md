@@ -10,7 +10,8 @@
 
 ## SQLD 준비
 - 나아가 SQLD를 준비하면서 공부했던 내용을 정리해둘겁니다!
-
+- 여기
+ 
 ## AWS EC2에 MySQL 깔기
 ``` 
 $ sudo apt update     # 업데이트해주기
