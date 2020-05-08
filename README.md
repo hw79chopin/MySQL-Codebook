@@ -10,7 +10,8 @@
 
 ## SQLD 준비
 - 나아가 SQLD를 준비하면서 공부했던 내용을 정리해둘겁니다!
-
+- 여기
+ 
 ## AWS EC2에 MySQL 깔기
 ``` 
 $ sudo apt update     # 업데이트해주기
@@ -34,3 +35,16 @@ bind-address = 0.0.0.0로
 $ sudo service mysql restart
 ```
 - 이제 AWS 보안그룹 설정에서 MySQL/AURORA 허용 IP를 0.0.0.0/0로 설정하면 외부에서 접속가능!!
+
+## MySQL Error:1290 해결하기 (secure-file-pri 설정해주기)
+- 만약 밑에 코드 결과가 텅 비어있으면
+```
+mysql> SELECT @@GLOBAL.secure_file_priv;
+```
+- Finder에서 my.cnf 찾아서
+```
+$ vim my.cnf
+  secure-file-pri=" " # 이 문장 추가해주기
+$ mysql.server stop
+$ mysql.server start
+```
