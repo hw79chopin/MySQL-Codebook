@@ -75,6 +75,19 @@ SELECT id, pay, sum(amount) FROM payment
 GROUP BY id, pay
 ORDER BY id asc;
 
+/* 지환이 */
+SELECT id, pay, amount
+FROM payment
+GROUP BY amount, id
+WITH rollup;
+
+/* 여진 */
+select u.user_id, sum(if (pay = 'card', amount, 0)) '카드', 
+sum(if (pay = 'cash', amount, 0)) '현금'
+from user u left join payment p on u.user_id = p.id
+group by user_id order by user_id;
+
+
 /* 3번: 이달의 독서왕 찾기: 2020년 4월까지 책을 가장 많이(권수) 구매한 사용자의 id, 이름, 구매권수를 구매권수, id 순으로 나타내세요 */
 SELECT user.user_id, count(b.bokkname) FROM book_purchase as b
 LEFT JOIN user
@@ -120,3 +133,13 @@ HAVING count(purchaser) > 2.28;
 
 SELECT * FROM user
 WHERE user_id=2;
+
+SELECT user_id, username FROM (SELECT * FROM user)a ;
+
+/* 여진 */
+select user_id, username, register_date, count(*) as count
+from user u right join book_purchase p on u.user_id = p.purchaser
+group by user_id
+having count > (select avg(count) from (select user_id, username, register_date, count(*) as count
+from user u right join book_purchase p on u.user_id = p.purchaser
+group by user_id) A);
