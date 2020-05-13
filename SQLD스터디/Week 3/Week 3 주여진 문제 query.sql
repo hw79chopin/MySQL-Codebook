@@ -76,9 +76,47 @@ GROUP BY id, pay
 ORDER BY id asc;
 
 /* 3번: 이달의 독서왕 찾기: 2020년 4월까지 책을 가장 많이(권수) 구매한 사용자의 id, 이름, 구매권수를 구매권수, id 순으로 나타내세요 */
+SELECT user.user_id, count(b.bokkname) FROM book_purchase as b
+LEFT JOIN user
+ON user.user_id = b.purchaser
+GROUP BY b.purchaser
+ORDER BY user.user_id asc;
+
+/* 4번: 연령, 성별, 장르별로 팔린 책 권수를 나타내세요. */
+SELECT * FROM user;
+SELECT * FROM book_purchase;
+SELECT * FROM book_info;
+
+SELECT u.user_id, u.sex, u.age "age", pur.book_id, pur.bokkname, inf.bookname, inf.genre
+FROM user u, book_purchase pur, book_info inf
+where u.user_id = pur.purchaser and pur.book_id = inf.book_id;
+/* 여기서 GROUP BY 에러 어떻게 해결해야되냐..... */
+
+/* 5번: 구매기록에 잘못 입력된 데이터가 있습니다. 출간일보다 구매일이 빠른 기록들을 찾아주ㅔ요 */
+SELECT * FROM book_info;
 SELECT * FROM book_purchase;
 
-SELECT book_purchase.book_id, book_purchase.bokkname,book_purchase.dates, user.user_id, user.username FROM book_purchase
-LEFT JOIN user
-ON user.user_id = book_purchase.purchaser
-WHERE DATE (dates) BETWEEN '2020-01-01' AND '2020-04-30';
+SELECT pur.purchaser, pur.book_id, pur.bokkname, pur.dates, inf.publication_date
+FROM book_purchase pur, book_info inf
+WHERE inf.book_id = pur.book_id and pur.dates < inf.publication_date;
+
+/* 6번: user테이블에서 유저와 해당 유저를 초대한 유저 출력. user_id=1부터 시작, 순방향으로 해주세요 */
+SELECT user_id, username, invited_by FROM user;
+
+/* 7번: book_purchase, user 테이블을 사용하여 총 구매권수가 유저들의 평균보다 많은 유저의 정보를 나타내세요 */
+SELECT * FROM user;
+SELECT * FROM book_purchase;
+
+SELECT purchaser, count(purchaser)
+FROM book_purchase
+GROUP BY purchaser;
+
+SELECT avg(purchaser) FROM book_purchase;
+
+SELECT purchaser, count(purchaser)
+FROM book_purchase
+GROUP BY purchaser
+HAVING count(purchaser) > 2.28;
+
+SELECT * FROM user
+WHERE user_id=2;
