@@ -12,7 +12,7 @@
 - SHOW DATABASES;: DB조회하기
 - CREATE DATABASE 데이터베이스명;: DB 만들기
 - USE 데이터베이스명;: DB 선택하기
-- SHOW 테이블명 STATUS: 테이블의 상태를 보여줌
+- SHOW 테이블명 STATUS: 테이블의 상태를 보여줌 
 - DESCRIBE 테이블명: 테이블 schema, 열 조회하기
 
 ## DDL(Data Definition Language)
