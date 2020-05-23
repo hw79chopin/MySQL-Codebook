@@ -3,7 +3,7 @@
 
 # MySQL codebook
 - 밑에 있는 markdown 내용은 MySQL에서 쓰는 query들에 대한 개념들
-- 'MySQL query.sql'은 위에서 설명한 개념들에 대한 각 예시 query문들을 모아놨다.
+- 'MySQL query.sql'은 위에서 설명한 개념들에 대한 각 예시 query문들을 모았음.
 - [mac에서 MySQL 설치하기](https://whitepaek.tistory.com/16)
 
 # SQL query 개념모음 (<이기적 SQL 개발자> 참조, Oracle base)
