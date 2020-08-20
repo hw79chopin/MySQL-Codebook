@@ -1,4 +1,4 @@
-# `SQL Codebook`
+# `MySQL Codebook`
 `#MySQL` `#Oracle`
 
 # 1. 소개
