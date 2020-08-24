@@ -8,6 +8,8 @@
 - 'MySQL query.sql'은 위에서 설명한 개념들에 대한 각 예시 query문들을 모았음.
 - [mac에서 MySQL 설치하기](https://whitepaek.tistory.com/16)
 
+---
+
 # 🚦 2. SQL query 개념모음 (<이기적 SQL 개발자> 참조, Oracle base)
 ## 2-1) 기본 SQL문 
 - SHOW DATABASES;: DB조회하기
@@ -360,6 +362,8 @@
 > Table Partition
 - partition은 대용량의 테이블을 여러 개의 데이터 파일에 분리해서 저장하는 것
 - 종류로는 range partition, list partition, hash partition이 있다.
+
+---
 
 ## 🚦 3. Optimizer
 - Optimizer란 SQL의 실행 계획을 수립하고 SQL을 실행하는 데이터베이스 관리 시스템의 소프트웨어
