@@ -1,13 +1,14 @@
-# `MySQL Codebook`
+<h1 align="center"><strong>🔎 MySQL Codebook</strong></h3>
+
 `#MySQL` `#Oracle`
 
-# 1. 소개
+# 🚦 1. 소개
 - 나의 MySQL codebook이다.
 - 밑에 있는 markdown 내용은 MySQL에서 쓰는 query들에 대한 개념들
 - 'MySQL query.sql'은 위에서 설명한 개념들에 대한 각 예시 query문들을 모았음.
 - [mac에서 MySQL 설치하기](https://whitepaek.tistory.com/16)
 
-# 2. SQL query 개념모음 (<이기적 SQL 개발자> 참조, Oracle base)
+# 🚦 2. SQL query 개념모음 (<이기적 SQL 개발자> 참조, Oracle base)
 ## 2-1) 기본 SQL문 
 - SHOW DATABASES;: DB조회하기
 - CREATE DATABASE 데이터베이스명;: DB 만들기
@@ -360,8 +361,10 @@
 - partition은 대용량의 테이블을 여러 개의 데이터 파일에 분리해서 저장하는 것
 - 종류로는 range partition, list partition, hash partition이 있다.
 
-## 3. Optimizer
+## 🚦 3. Optimizer
 - Optimizer란 SQL의 실행 계획을 수립하고 SQL을 실행하는 데이터베이스 관리 시스템의 소프트웨어
 
 > PLAN_TABLE
 - DESC PLAN_TABLE;: 실행계획을 조회
+
+<h3 align="center"><strong>끗! 🙌</strong></h3>
