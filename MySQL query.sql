@@ -8,6 +8,7 @@ CREATE TABLE dept
 /* CREATE TABLE 예시 */
 CREATE TABLE emp
 (
+    id INT UNSIGNED NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,   # 여기서 AUTO_INCREMENT란 해당 field에 값을 안 넣어도 자동으로 값이 증가하도록 하는 코드이다.
     empno int(10),
     ename VARCHAR(15), 
     sal int(10) default 0,
