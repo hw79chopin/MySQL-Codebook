@@ -376,7 +376,12 @@
 ## 🚦 4. 기타
 ### MySQL database 접속이 계속 안 될 때
 - MySQL을 Terminal로 접속한 다음에   
+```console
+$ cd /usr/local/mysql/bin
+$ ./mysql -u root -p
+$ mysql -u root -p
 $ ALTER user 'root'@'localhost' identified with mysql_native_password BY '비밀번호'  
+```
 - 이 명령을 입력하면 된다.  
 
 
