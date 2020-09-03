@@ -371,4 +371,13 @@
 > PLAN_TABLE
 - DESC PLAN_TABLE;: 실행계획을 조회
 
+---
+
+## 🚦 4. 기타
+### MySQL database 접속이 계속 안 될 때
+- MySQL을 Terminal로 접속한 다음에   
+$ ALTER user 'root'@'localhost' identified with mysql_native_password BY '비밀번호'  
+- 이 명령을 입력하면 된다.  
+
+
 <h3 align="center"><strong>끗! 🙌</strong></h3>
