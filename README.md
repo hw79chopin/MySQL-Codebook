@@ -1,20 +1,24 @@
-# SQL collection
-![](https://svitla.com/uploads_converted/0/2135-database_management_software.webp?1560161553)
+<h1 align="center"><strong>🔎 MySQL Codebook</strong></h3>
 
-# MySQL codebook
+`#MySQL` `#Oracle`
+
+# 🚦 1. 소개
+- 나의 MySQL codebook이다.
 - 밑에 있는 markdown 내용은 MySQL에서 쓰는 query들에 대한 개념들
 - 'MySQL query.sql'은 위에서 설명한 개념들에 대한 각 예시 query문들을 모았음.
 - [mac에서 MySQL 설치하기](https://whitepaek.tistory.com/16)
 
-# SQL query 개념모음 (<이기적 SQL 개발자> 참조, Oracle base)
-## 기본 SQL문 
+---
+
+# 🚦 2. SQL query 개념모음 (<이기적 SQL 개발자> 참조, Oracle base)
+## 2-1) 기본 SQL문 
 - SHOW DATABASES;: DB조회하기
 - CREATE DATABASE 데이터베이스명;: DB 만들기
 - USE 데이터베이스명;: DB 선택하기
 - SHOW 테이블명 STATUS: 테이블의 상태를 보여줌 
 - DESCRIBE 테이블명: 테이블 schema, 열 조회하기
 
-## DDL(Data Definition Language)
+## 2-2) DDL(Data Definition Language)
 - RDB의 구조를 정의하는 언어
 - CREATE, ALTER, DROP 등등
 
@@ -39,7 +43,7 @@
 > DELETE
 - DELETE FROM 테이블명 WHERE 조건 = 조건;
 
-## DML(Data Manipulation Language)
+## 2-3) DML(Data Manipulation Language)
 - 테이블에서 데이터를 입력, 수정, 삭제, 조회함
 - INSERT, UPDATE
 
@@ -193,7 +197,7 @@
 - DATE_FORMAT( ): 전달받은 형식에 맞춰 날짜, 시간 정보를 문자열로 반환
 
 
-## DCL(Data Control Language)
+## 2-4) DCL(Data Control Language)
 - 사용자에게 권한을 부여하거나 회수한다.
 
 > GRANT
@@ -207,7 +211,7 @@
 - REVOKE 권한 ON 테이블명 FROM user;
 
 
-## TCL(Transaction Control Language)
+## 2-5) TCL(Transaction Control Language)
 - 트랜잭션을 제어하는 명령어
 
 > COMMIT
@@ -224,7 +228,7 @@
 - savepoint 이름;
 - rollback to savepoint이름;
 
-## 고급 SQL
+## 2-6) 고급 SQL
 
 > JOIN
 - SELECT 칼럼명 FROM 테이블1, 테이블2 WHERE 조건;: 테이블 합치기
@@ -359,8 +363,26 @@
 - partition은 대용량의 테이블을 여러 개의 데이터 파일에 분리해서 저장하는 것
 - 종류로는 range partition, list partition, hash partition이 있다.
 
-## Optimizer
+---
+
+## 🚦 3. Optimizer
 - Optimizer란 SQL의 실행 계획을 수립하고 SQL을 실행하는 데이터베이스 관리 시스템의 소프트웨어
 
 > PLAN_TABLE
 - DESC PLAN_TABLE;: 실행계획을 조회
+
+---
+
+## 🚦 4. 기타
+### MySQL database 접속이 계속 안 될 때
+- MySQL을 Terminal로 접속한 다음에   
+```console
+$ cd /usr/local/mysql/bin
+$ ./mysql -u root -p
+$ mysql -u root -p
+$ ALTER user 'root'@'localhost' identified with mysql_native_password BY '비밀번호'  
+```
+- 이 명령을 입력하면 된다.  
+
+
+<h3 align="center"><strong>끗! 🙌</strong></h3>
