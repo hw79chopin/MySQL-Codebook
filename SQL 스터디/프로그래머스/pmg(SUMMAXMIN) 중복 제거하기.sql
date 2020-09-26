@@ -1,0 +1,3 @@
+-- 중복되는 이름을 제거하고 출력하시오
+SELECT COUNT(DISTINCT NAME)
+    FROM ANIMAL_INS;
