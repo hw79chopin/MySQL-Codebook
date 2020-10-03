@@ -1,0 +1,3 @@
+-- 데이터 저장 및 취소하기 (COMMIT, ROLLBACK)
+-- COMMIT: 이전에 수행했던 DML 작업들을 DB에 영구히 반영하는 TCL 명령어이다. 
+-- ROLLBACK: 이전 COMMIT 명령어 이후 DML문을 취소하는 TCL 명령어다.
